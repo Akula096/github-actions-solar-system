@@ -14,5 +14,13 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v6
         
-      - name: show files
-        run: ls -l
+      - name: Setup NodeJS Version
+        uses: actions/setup-node@v6
+        with:
+          node-version: 20
+      
+      - name: Install Dependencies
+        run: npm install 
+
+      - name: List 
+        run: ls -l 
