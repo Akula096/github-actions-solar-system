@@ -23,4 +23,8 @@ jobs:
         run: npm install 
 
       - name: List 
-        run: ls -la
+        run: |
+         ls -la
+         pwd
+         cd 
+         ls -la 
