@@ -8,7 +8,7 @@ on:
       - 'feature/*'
 jobs:
   unit-testing:
-    name: Unittesting
+    name: Unit Testing
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -23,7 +23,7 @@ jobs:
         uses: actions/cache@v4
         with: 
           path: ~/.npm
-          key: ${{ runner.os}}-node-modules-${{ hashFiles('package-lock.jsons')}}
+          key: ${{ runner.os}}-node-modules-${{ hashFiles('package-lock.json')}}
 
       - name: Install Dependencies
         run: npm install 
